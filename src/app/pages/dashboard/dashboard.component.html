@@ -3,3 +3,8 @@
 <p *ngIf="!userLoginOn" >Debe de iniciar sesion para poder utilizar la aplicacion..!</p>
 
 <p *ngIf="userLoginOn" >Bienvenido..!</p>
+<div *ngIf="userLoginOn">
+    <p>Nombre: {{userData?.name}}</p>
+    <p>Apellido: {{userData?.lastName}}</p>
+    <p>Email: {{userData?.email}}</p>
+</div>
