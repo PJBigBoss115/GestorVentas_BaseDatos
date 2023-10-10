@@ -1,7 +1,8 @@
 export interface User {
-    id:number;
-    name?:string;
-    lastName?:string;
-    email:string;
-    message?:string;
+        id_Usuario: number;
+        nombre?: string;
+        apellido?: string;
+        correo: string;
+        clave: string;
+        tipo_Usuario?: string;
 }

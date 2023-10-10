@@ -9,13 +9,15 @@ import { User } from './user';
 })
 export class LoginService {
 
+  private urlApiUsuario = 'http://localhost:3000/usuarios';
+
   currentUserLoginOn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({id:0, email:''});
+  currentUserData: BehaviorSubject<User> = new BehaviorSubject<User>({id_Usuario:0, correo:'', clave:''});
 
   constructor(private http: HttpClient) { }
 
   login(credentials:LoginRequest):Observable<User> {
-    return this.http.get<User>('././assets/data.json').pipe(
+    return this.http.get<User>(this.urlApiUsuario).pipe(
       tap( (userData: User) => {
         this.currentUserData.next(userData);
         this.currentUserLoginOn.next(true);
@@ -25,7 +27,7 @@ export class LoginService {
   }
 
   private handleError(error:HttpErrorResponse){
-    if(error.status===0){
+    if(error.status === 0){
       console.error('Se ha producido un error', error.error);
     }
     else{
