@@ -9,13 +9,14 @@ import { LoginRequest } from 'src/app/services/auth/loginRequest';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
-  loginError:string="";
-  loginForm = this.formBuiler.group({
-    email:['example@gmail.com', [Validators.required, Validators.email]],
-    password:['', Validators.required],
-  })
-  constructor(private formBuiler:FormBuilder, private router:Router, private loginService: LoginService) { }
+export class LoginComponent implements OnInit {
+  loginError: string = '';
+  loginForm = this.formBuilder.group({
+    email: ['example@gmail.com', [Validators.required, Validators.email]],
+    password: ['', Validators.required],
+  });
+
+  constructor(private formBuilder: FormBuilder, private router: Router, private loginService: LoginService) { }
 
   ngOnInit(): void {
   }
@@ -28,25 +29,27 @@ export class LoginComponent implements OnInit{
     return this.loginForm.controls.password;
   }
 
-  login(){
-    if(this.loginForm.valid){
-      this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
-        next: (userData) => {
-          console.log(userData);
-        },
-        error: (errorData) => {
-          console.error(errorData);
-          this.loginError=errorData;
-        },
-        complete: () => {
-          console.info("Login completo");
-          this.router.navigateByUrl('/inicio');
-          this.loginForm.reset();
-        }
-      })
-    }
-    else{
+  login() {
+    if (this.loginForm.valid) {
+      const username = this.email.value;
+      const password = this.password.value;
+  
+      if (username !== null && password !== null) { // Comprobación para evitar null
+        this.loginService.login(username, password).subscribe((isValid) => {
+          if (isValid) {
+            console.log('Inicio de sesión exitoso');
+            this.router.navigateByUrl('/inicio');
+            this.loginForm.reset();
+          } else {
+            console.error('Credenciales incorrectas');
+            this.loginError = 'Credenciales incorrectas';
+          }
+        });
+      } else {
+        console.error('Nombre de usuario o contraseña es null');
+      }
+    } else {
       this.loginForm.markAllAsTouched();
     }
-  }
+  }  
 }

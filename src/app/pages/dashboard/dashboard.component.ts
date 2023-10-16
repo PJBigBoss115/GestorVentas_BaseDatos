@@ -28,7 +28,7 @@ export class DashboardComponent implements OnInit , OnDestroy {
     this.loginService.currentUserData.subscribe(
       {
         next:(userData) => {
-          this.userData=userData;
+          this.userData = userData || undefined;
         }
       }
     )
