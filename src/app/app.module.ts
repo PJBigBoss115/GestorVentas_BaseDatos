@@ -10,7 +10,10 @@ import { NavComponent } from './shared/nav/nav.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './pages/modal/modal.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { ArticulosComponent } from './pages/articulos/articulos.component';
+import { OrComprasComponent } from './pages/or-compras/or-compras.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ModalComponent } from './pages/modal/modal.component';
     DashboardComponent,
     LoginComponent,
     NavComponent,
-    ModalComponent
+    PedidosComponent,
+    ArticulosComponent,
+    OrComprasComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

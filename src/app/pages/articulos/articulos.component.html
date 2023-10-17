@@ -1,0 +1,28 @@
+<table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>PassWord</th>
+        <th>Tipo de Usuario</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data; let i = index">
+        <td>{{ item.id_Usuario }}</td>
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.apellido }}</td>
+        <td>{{ item.correo }}</td>
+        <td>{{ item.clave }}</td>
+        <td>{{ item.tipo_Usuario }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="toggleEdit()">Editar</button>
+          <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
+          <button class="btn btn-danger" (click)="deleteData(i)" *ngIf="isDeleting">Confirmar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>  
