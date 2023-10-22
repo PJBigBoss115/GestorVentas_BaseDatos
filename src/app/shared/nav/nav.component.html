@@ -13,6 +13,18 @@
             <a class="nav-link" routerLink="/iniciar-sesion">Iniciar Sesión</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" >DashBoard</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" routerLink="/articulos">Articulos</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" >Pedidos</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" >Ordenes de Compra</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" >Cerrar Sesión</a>
           </li>
         </ul>

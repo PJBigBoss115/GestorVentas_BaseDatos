@@ -1,23 +1,17 @@
+<app-nav></app-nav>
 <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th>id</th>
+        <th>Id_Articulo</th>
         <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Correo</th>
-        <th>PassWord</th>
-        <th>Tipo de Usuario</th>
-        <th>Acciones</th>
+        <th>Descripcion</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let item of data; let i = index">
-        <td>{{ item.id_Usuario }}</td>
-        <td>{{ item.nombre }}</td>
-        <td>{{ item.apellido }}</td>
-        <td>{{ item.correo }}</td>
-        <td>{{ item.clave }}</td>
-        <td>{{ item.tipo_Usuario }}</td>
+        <td>{{ item.Id_Articulo }}</td>
+        <td>{{ item.Nombre }}</td>
+        <td>{{ item.Descripcion }}</td>
         <td>
           <button class="btn btn-primary" (click)="toggleEdit()">Editar</button>
           <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>

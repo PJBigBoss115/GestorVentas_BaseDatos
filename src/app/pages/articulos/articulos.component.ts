@@ -20,7 +20,7 @@ export class ArticulosComponent implements OnInit {
 
   getDataFromApi() {
     // Reemplaza la URL con la URL de tu API
-    this.http.get('http://localhost:3000/usuarios').subscribe((response: any) => {
+    this.http.get('http://localhost:3000/verRegistros/Articulo').subscribe((response: any) => {
       this.data = response; // Asigna los datos de la API a la matriz 'data'
     });
   }
