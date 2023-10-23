@@ -1,5 +1,9 @@
 <app-header></app-header>
-<router-outlet></router-outlet>
-<div class="fixed-bottom">
-    <app-footer></app-footer>
+
+<app-nav></app-nav>
+
+<div class="content-container">
+    <router-outlet></router-outlet>
 </div>
+
+<app-footer class="sticky-footer"></app-footer>

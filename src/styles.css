@@ -5,3 +5,17 @@
 .ng-invalid:not(form).ng-touched {
     border-left: 5px solid #a94442;
 }
+
+/* Reducir el tamaño de la barra de desplazamiento horizontal */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho personalizado de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color de fondo del pulgar de la barra de desplazamiento */
+    border-radius: 4px; /* Borde redondeado del pulgar */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Cambiar el color del pulgar al pasar el mouse sobre él */
+}

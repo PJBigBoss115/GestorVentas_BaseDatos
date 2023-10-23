@@ -1,0 +1,16 @@
+<form [formGroup]="formularioArticulo">
+    <div class="mb-3">
+        <label for="Id_Articulo" class="form-label">Id_Articulo:</label>
+        <input type="number" class="form-control" id="Id_Articulo" formControlName="Id_Articulo">
+    </div>
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="Nombre" formControlName="Nombre">
+    </div>
+    <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripción:</label>
+        <textarea class="form-control" id="Descripcion" rows="2" formControlName="Descripcion"></textarea>
+    </div>
+    
+    <button class="btn btn-outline-dark" (click)="isEditing ? editArticulo() : crearArticulo()">{{ isEditing ? 'Editar' : 'Crear Artículo' }}</button>
+</form>  

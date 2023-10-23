@@ -1,0 +1,7 @@
+.content-container {
+    padding-bottom: 180px;
+}
+
+.sticky-footer {
+    flex-shrink: 0;
+}

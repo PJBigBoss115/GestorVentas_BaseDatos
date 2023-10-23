@@ -1,22 +1,24 @@
-<app-nav></app-nav>
-<table class="table table-striped table-hover">
+<div class="table-container">
+  <table class="table table-striped table-hover">
+    <button class="btn btn-primary" [routerLink]="['/addArticulos', true]">Agregar Artículo</button>
     <thead>
       <tr>
         <th>Id_Articulo</th>
         <th>Nombre</th>
         <th>Descripcion</th>
       </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of data; let i = index">
-        <td>{{ item.Id_Articulo }}</td>
-        <td>{{ item.Nombre }}</td>
-        <td>{{ item.Descripcion }}</td>
-        <td>
-          <button class="btn btn-primary" (click)="toggleEdit()">Editar</button>
-          <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
-          <button class="btn btn-danger" (click)="deleteData(i)" *ngIf="isDeleting">Confirmar</button>
-        </td>
-      </tr>
-    </tbody>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data; let i = index">
+          <td>{{ item.Id_Articulo }}</td>
+          <td>{{ item.Nombre }}</td>
+          <td>{{ item.Descripcion }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="startEdit(item)">Editar</button>
+            <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
+            <button class="btn btn-danger" (click)="deleteData(item.Id_Articulo)" *ngIf="isDeleting">Confirmar</button>
+          </td>
+        </tr>
+      </tbody>
   </table>  
+</div>

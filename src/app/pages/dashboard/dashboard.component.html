@@ -1,10 +1,11 @@
-<app-nav></app-nav>
+<div class="content-container">
+    <p *ngIf="!userLoginOn" >Debe de iniciar sesion para poder utilizar la aplicacion..!</p>
+    
+    <p *ngIf="userLoginOn" >Bienvenido..!</p>
 
-<p *ngIf="!userLoginOn" >Debe de iniciar sesion para poder utilizar la aplicacion..!</p>
-
-<p *ngIf="userLoginOn" >Bienvenido..!</p>
-<div *ngIf="userLoginOn">
-    <p>Nombre: {{userData?.nombre}}</p>
-    <p>Apellido: {{userData?.apellido}}</p>
-    <p>Tipo: {{userData?.tipo_Usuario}}</p>
+    <div *ngIf="userLoginOn">
+        <p>Nombre: {{userData?.nombre}}</p>
+        <p>Apellido: {{userData?.apellido}}</p>
+        <p>Tipo: {{userData?.tipo_Usuario}}</p>
+    </div>
 </div>

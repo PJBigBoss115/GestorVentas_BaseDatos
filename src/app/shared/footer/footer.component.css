@@ -1,8 +1,28 @@
+/* Estilo personalizado para el footer */
 footer {
-    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
 
-.copyrignt{
+.footer-custom {
+    background-color: black; /* Color de fondo personalizado */
     color: white;
-    font-size: 10px;
+    padding: 10px; /* Ajusta este valor según tus necesidades */
+}
+
+.footer-custom p {
+    font-size: 14px; /* Tamaño de fuente del texto del párrafo */
+    margin: 5px 0; /* Espacio alrededor del párrafo */
+}
+
+.footer-custom .fa {
+    font-size: 18px; /* Tamaño de fuente de los íconos */
+    margin-right: 10px; /* Espacio entre los íconos */
+}
+
+/* Clase para ajustar el margen inferior del footer */
+.no-margin {
+    margin-bottom: 0;
 }

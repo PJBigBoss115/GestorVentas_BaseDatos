@@ -1,3 +1,18 @@
-header {
-    background: url(https://cdn.pixabay.com/photo/2020/02/14/18/05/ecommerce-4849055_1280.jpg);
+/* Estilo personalizado para el encabezado */
+.header-custom {
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/14/18/05/ecommerce-4849055_1280.jpg);
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.header-custom h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.header-custom p {
+    font-style: italic;
+    margin: 0;
 }

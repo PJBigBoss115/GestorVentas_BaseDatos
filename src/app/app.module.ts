@@ -14,6 +14,7 @@ import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { ArticulosComponent } from './pages/articulos/articulos.component';
 import { OrComprasComponent } from './pages/or-compras/or-compras.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
+import { AddArticulosComponent } from './pages/add-articulos/add-articulos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InicioComponent } from './pages/inicio/inicio.component';
     PedidosComponent,
     ArticulosComponent,
     OrComprasComponent,
-    InicioComponent
+    InicioComponent,
+    AddArticulosComponent
   ],
   imports: [
     BrowserModule,
