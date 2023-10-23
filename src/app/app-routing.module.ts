@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LoginComponent } from './auth/login/login.component';
 import { ArticulosComponent } from './pages/articulos/articulos.component';
 import { AddArticulosComponent } from './pages/add-articulos/add-articulos.component';
+import { NavComponent } from './shared/nav/nav.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/inicio', pathMatch:'full'},
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'iniciar-sesion', component:LoginComponent},
   {path: 'articulos', component:ArticulosComponent},
   {path: 'addArticulos', component:AddArticulosComponent},
-  {path: 'addArticulos/:valorBooleano', component: AddArticulosComponent}
+  {path: 'addArticulos/:valorBooleano', component: AddArticulosComponent},
+  {path: 'iniciar/:valorBooleano', component: NavComponent}
 ];
 
 

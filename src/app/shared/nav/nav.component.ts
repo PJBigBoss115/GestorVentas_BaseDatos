@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/auth/login.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -9,7 +10,7 @@ import { LoginService } from 'src/app/services/auth/login.service';
 export class NavComponent implements OnInit , OnDestroy {
   userLoginOn:boolean=false;
 
-  constructor(private loginService:LoginService) {}
+  constructor(private route: ActivatedRoute, private loginService:LoginService) {}
   
   ngOnDestroy(): void {
     this.loginService.currentUserLoginOn.unsubscribe();
@@ -23,5 +24,13 @@ export class NavComponent implements OnInit , OnDestroy {
         }
       }
     )
+
+    this.route.paramMap.subscribe(params => {
+      const valorBooleano = params.get('valorBooleano');
+      if (valorBooleano === 'false') {
+        // Asigna el valor a una variable en tu componente
+        this.userLoginOn = false; // Aquí miVariable es una variable en tu componente
+      }
+    });
   }
 }

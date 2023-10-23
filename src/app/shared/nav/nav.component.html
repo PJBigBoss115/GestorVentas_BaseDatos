@@ -22,7 +22,7 @@
             <a class="nav-link" >Ordenes de Compra</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
-            <a class="nav-link" >Cerrar Sesión</a>
+            <a class="nav-link" [routerLink]="['/iniciar', false]">Cerrar Sesión</a>
           </li>
         </ul>
       </div>
