@@ -22,6 +22,9 @@
             <a class="nav-link" >Ordenes de Compra</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" routerLink="/reportes/proveedores">Reporte Proveedores</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" [routerLink]="['/iniciar', false]">Cerrar Sesión</a>
           </li>
         </ul>
