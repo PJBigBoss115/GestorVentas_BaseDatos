@@ -1,0 +1,22 @@
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id Oferta</th>
+                <th>Id Proveedor</th>
+                <th>Id Pedido</th>
+                <th>Precio Unitario</th>
+                <th>Fecha Presentacion</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of informeData">
+                <td>{{ item.Id_Oferta }}</td>
+                <td>{{ item.Id_Prov }}</td>
+                <td>{{ item.Id_Pedido }}</td>
+                <td>{{ item.Precio_U }}</td>
+                <td>{{ item.Fecha_Presentacion }}</td>
+            </tr>
+            </tbody>
+    </table>
+</div>

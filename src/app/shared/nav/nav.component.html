@@ -7,14 +7,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li *ngIf="!userLoginOn" class="nav-item">
-            <a class="nav-link" routerLink="/iniciar-sesion">Iniciar Sesión</a>
+            <a class="nav-link" routerLink="/iniciar-sesion.">Iniciar Sesión</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" >DashBoard</a>
           </li>
+
           <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" routerLink="/articulos">Articulos</a>
           </li>
+          <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" routerLink="/proveedores">Proveedores</a>
+          </li>
+          <li *ngIf="userLoginOn" class="nav-item">
+            <a class="nav-link" routerLink="/ofertas">Ofertas</a>
+          </li>
+
           <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" >Pedidos</a>
           </li>

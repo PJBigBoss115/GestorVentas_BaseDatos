@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { DataSharingService } from 'src/app/services/data/data-sharing.service';
 
-
 @Component({
-  selector: 'app-articulos',
-  templateUrl: './articulos.component.html',
-  styleUrls: ['./articulos.component.css']
+  selector: 'app-proveedores',
+  templateUrl: './proveedores.component.html',
+  styleUrls: ['./proveedores.component.css']
 })
-export class ArticulosComponent implements OnInit, OnDestroy {
+export class ProveedoresComponent implements OnInit, OnDestroy {
   data: any[] = [];
   apiUrl = 'http://localhost:3000';
   
@@ -26,25 +25,20 @@ export class ArticulosComponent implements OnInit, OnDestroy {
   }
 
   getDataFromApi() {
-    this.http.get(`${this.apiUrl}/verRegistros/Articulo`).subscribe((response: any) => {
+    this.http.get(`${this.apiUrl}/verRegistros/Proveedores`).subscribe((response: any) => {
       this.data = response; // Asigna los datos de la API a la matriz 'data'
     });
   }
 
   deleteData(id: number) {
-    this.http.delete(`${this.apiUrl}/eliminarRegistro/Articulo/${id}`).subscribe((response) => {
+    this.http.delete(`${this.apiUrl}/eliminarProveedor/Proveedores/${id}`).subscribe((response) => {
       this.getDataFromApi(); // Actualiza los datos después de eliminar un artículo
     });
   }
 
-  addProveedor(articulo: any) {
-    this.dataSharingService.enviarData(articulo); // Utiliza el método enviarData en lugar de emit
-    this.router.navigate(['/addProveedores', true]);
-  }
-
-  startEdit(articulo: any) {
-    this.dataSharingService.enviarData(articulo); // Utiliza el método enviarData en lugar de emit
-    this.router.navigate(['/addArticulos']);
+  startEdit(proveedor: any) {
+    this.dataSharingService.enviarData(proveedor); // Utiliza el método enviarData en lugar de emit
+    this.router.navigate(['/addProveedores']);
   }  
 
   // Función para habilitar o deshabilitar la eliminación

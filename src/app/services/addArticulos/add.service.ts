@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddService {
   private apiUrl = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Método para crear un nuevo artículo
   crearArticulo(articulo: any) {

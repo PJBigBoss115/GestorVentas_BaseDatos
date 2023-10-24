@@ -16,6 +16,10 @@ import { OrComprasComponent } from './pages/or-compras/or-compras.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
 import { AddArticulosComponent } from './pages/add-articulos/add-articulos.component';
 import { ReporteProveedoresComponent } from './pages/ReporteProveedores/reporte-proveedores/reporte-proveedores.component';
+import { ProveedoresComponent } from './pages/Proveedores/proveedores/proveedores.component';
+import { AddproveedoresComponent } from './pages/addproveedores/addproveedores/addproveedores.component';
+import { OfertasComponent } from './pages/Ofertas/ofertas/ofertas.component';
+import { AddofertasComponent } from './pages/addofertas/addofertas/addofertas.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { ReporteProveedoresComponent } from './pages/ReporteProveedores/reporte-
     OrComprasComponent,
     InicioComponent,
     AddArticulosComponent,
-    ReporteProveedoresComponent
+    ReporteProveedoresComponent,
+    ProveedoresComponent,
+    AddproveedoresComponent,
+    OfertasComponent,
+    AddofertasComponent
   ],
   imports: [
     BrowserModule,

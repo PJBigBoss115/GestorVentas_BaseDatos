@@ -1,0 +1,27 @@
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <button class="btn btn-primary" [routerLink]="['/addArticulos', true]">Agregar Ofertas</button>
+        <thead>
+            <tr>
+                <th>Id_Proveedor</th>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Funciones de tabla</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data; let i = index">
+                <td>{{ item.Id_Proveedor }}</td>
+                <td>{{ item.Nombre }}</td>
+                <td>{{ item.Direccion }}</td>
+                <td>{{ item.Telefono }}</td>
+                <td>
+                    <button class="btn btn-primary" (click)="startEdit(item)">Editar</button>
+                    <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
+                    <button class="btn btn-danger" (click)="deleteData(item.Id_Articulo)" *ngIf="isDeleting">Confirmar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>  
+</div>

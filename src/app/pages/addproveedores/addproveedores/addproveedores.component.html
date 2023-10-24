@@ -1,0 +1,23 @@
+<form [formGroup]="formularioArticulo">
+    <div class="mb-3">
+        <label for="Id_Proveedor" class="form-label">Id_Proveedor:</label>
+        <input type="number" class="form-control" id="Id_Proveedor" formControlName="Id_Proveedor">
+    </div>
+    <div class="mb-3">
+        <label for="Nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="Nombre" formControlName="Nombre">
+    </div>
+    <div class="mb-3">
+        <label for="Direccion" class="form-label">Dirección:</label>
+        <textarea class="form-control" id="Direccion" rows="1" formControlName="Direccion"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="Telefono" class="form-label">Telefono:</label>
+        <input type="text" class="form-control" id="Telefono" formControlName="Telefono">
+    </div>
+    <div class="mb-3" *ngIf="!this.isEditing">
+        <label for="Precio" class="form-label">Precio:</label>
+        <input type="text" class="form-control" id="Precio" formControlName="Precio">
+    </div>
+    <button class="btn btn-outline-dark" (click)="isEditing ? editarProveedor() : crearProveedor()">{{ isEditing ? 'Editar' : 'Crear' }}</button>
+</form> 
