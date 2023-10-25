@@ -7,6 +7,7 @@ import { Articulo } from './articulo';
 })
 export class DataSharingService {
   private enviaDataSubject = new BehaviorSubject<Articulo | null>(null);
+  private tipoUsuario: string;
   
   constructor() { }
 
@@ -16,5 +17,13 @@ export class DataSharingService {
 
   obtenerData(): Observable<Articulo | null> {
     return this.enviaDataSubject.asObservable();
+  }
+
+  setTipoUsuario(tipo: string) {
+    this.tipoUsuario = tipo;
+  }
+
+  getTipoUsuario() {
+    return this.tipoUsuario;
   }
 }

@@ -1,0 +1,24 @@
+<form [formGroup]="formularioArticulo">
+    <div class="mb-3">
+        <label for="Id_Orden" class="form-label">Id Orden:</label>
+        <input type="number" class="form-control" id="Id_Orden" formControlName="Id_Orden">
+    </div>
+    <div class="mb-3">
+        <label for="Descripcion" class="form-label">Descripción:</label>
+        <textarea class="form-control" id="Descripcion" rows="2" formControlName="Descripcion"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="Tipo" class="form-label">Tipo:</label>
+        <input type="text" class="form-control" id="Tipo" formControlName="Tipo">
+    </div>
+    <div class="mb-3">
+        <label for="fecha_Armado" class="form-label">Fecha Armado:</label>
+        <input type="date" class="form-control" id="fecha_Armado" formControlName="fecha_Armado">
+    </div>
+    <div class="mb-3">
+        <label for="fecha_finalizado" class="form-label">Fecha finalizado:</label>
+        <input type="date" class="form-control" id="fecha_finalizado" formControlName="fecha_finalizado">
+    </div>
+    
+    <button class="btn btn-outline-dark" (click)="CrearOrden()">Crear Orden de Compra</button>
+</form>

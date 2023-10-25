@@ -39,7 +39,12 @@ export class ProveedoresComponent implements OnInit, OnDestroy {
   startEdit(proveedor: any) {
     this.dataSharingService.enviarData(proveedor); // Utiliza el método enviarData en lugar de emit
     this.router.navigate(['/addProveedores']);
-  }  
+  }
+  
+  agregarOferta(proveedor: any) {
+    this.dataSharingService.enviarData(proveedor); // Utiliza el método enviarData en lugar de emit
+    this.router.navigate(['/addOfertas']);
+  }
 
   // Función para habilitar o deshabilitar la eliminación
   toggleDelete() {

@@ -17,7 +17,7 @@
           <td>
             <button class="btn btn-primary" (click)="startEdit(item)">Editar</button>
             <button class="btn btn-primary" (click)="addProveedor(item)">Agregar Proveedor</button>
-            <button class="btn btn-primary" >Nuevo pedido</button>
+            <button class="btn btn-primary" (click)="hacerpedido(item)">Hacer Pedido</button>
             <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
             <button class="btn btn-danger" (click)="deleteData(item.Id_Articulo)" *ngIf="isDeleting">Confirmar</button>
           </td>

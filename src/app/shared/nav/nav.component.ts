@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/auth/login.service';
 import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -10,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class NavComponent implements OnInit , OnDestroy {
   userLoginOn:boolean=false;
 
-  constructor(private route: ActivatedRoute, private loginService:LoginService) {}
+  constructor(private route: ActivatedRoute, private loginService:LoginService, private router: Router) {}
   
   ngOnDestroy(): void {
     this.loginService.currentUserLoginOn.unsubscribe();
@@ -32,5 +33,11 @@ export class NavComponent implements OnInit , OnDestroy {
         this.userLoginOn = false; // Aquí miVariable es una variable en tu componente
       }
     });
+  }
+
+  recargarPagina() {
+    // Utiliza el objeto location para recargar la página
+    this.router.navigate(['/inicio']);
+    location.reload();
   }
 }

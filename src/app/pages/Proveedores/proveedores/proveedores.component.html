@@ -1,6 +1,5 @@
 <div class="table-container">
     <table class="table table-striped table-hover">
-        <button class="btn btn-primary" [routerLink]="['/addArticulos', true]">Agregar Ofertas</button>
         <thead>
             <tr>
                 <th>Id_Proveedor</th>
@@ -18,6 +17,7 @@
                 <td>{{ item.Telefono }}</td>
                 <td>
                     <button class="btn btn-primary" (click)="startEdit(item)">Editar</button>
+                    <button class="btn btn-primary" (click)="agregarOferta(item)">Agregar Ofertas</button>
                     <button class="btn btn-danger" (click)="toggleDelete()">Borrar</button>
                     <button class="btn btn-danger" (click)="deleteData(item.Id_Articulo)" *ngIf="isDeleting">Confirmar</button>
                 </td>

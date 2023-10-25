@@ -37,15 +37,20 @@ export class ArticulosComponent implements OnInit, OnDestroy {
     });
   }
 
+  startEdit(articulo: any) {
+    this.dataSharingService.enviarData(articulo); // Utiliza el método enviarData en lugar de emit
+    this.router.navigate(['/addArticulos']);
+  }
+  
   addProveedor(articulo: any) {
     this.dataSharingService.enviarData(articulo); // Utiliza el método enviarData en lugar de emit
     this.router.navigate(['/addProveedores', true]);
   }
 
-  startEdit(articulo: any) {
+  hacerpedido(articulo: any) {
     this.dataSharingService.enviarData(articulo); // Utiliza el método enviarData en lugar de emit
-    this.router.navigate(['/addArticulos']);
-  }  
+    this.router.navigate(['/addPedido']);
+  }
 
   // Función para habilitar o deshabilitar la eliminación
   toggleDelete() {

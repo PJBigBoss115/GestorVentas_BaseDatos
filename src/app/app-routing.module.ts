@@ -11,6 +11,10 @@ import { ProveedoresComponent } from './pages/Proveedores/proveedores/proveedore
 import { AddproveedoresComponent } from './pages/addproveedores/addproveedores/addproveedores.component';
 import { OfertasComponent } from './pages/Ofertas/ofertas/ofertas.component';
 import { AddofertasComponent } from './pages/addofertas/addofertas/addofertas.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
+import { OrComprasComponent } from './pages/or-compras/or-compras.component';
+import { AddpedidosComponent } from './pages/addPedidos/addpedidos/addpedidos.component';
+import { AddOrdenesComComponent } from './pages/addOrdenesCom/add-ordenes-com/add-ordenes-com.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/inicio', pathMatch:'full'},
@@ -25,7 +29,11 @@ const routes: Routes = [
   {path: 'addProveedores', component: AddproveedoresComponent},
   {path: 'addProveedores/:valorBooleano', component: AddproveedoresComponent},
   {path: 'ofertas', component: OfertasComponent},
-  {path: 'addOfertas', component: AddofertasComponent}
+  {path: 'addOfertas', component: AddofertasComponent},
+  {path: 'pedidos', component: PedidosComponent},
+  {path: 'ordenCompra', component: OrComprasComponent},
+  {path: 'addPedido', component: AddpedidosComponent},
+  {path: 'addOrdenCompra', component: AddOrdenesComComponent}
 ];
 
 @NgModule({

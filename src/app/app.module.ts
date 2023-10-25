@@ -20,6 +20,9 @@ import { ProveedoresComponent } from './pages/Proveedores/proveedores/proveedore
 import { AddproveedoresComponent } from './pages/addproveedores/addproveedores/addproveedores.component';
 import { OfertasComponent } from './pages/Ofertas/ofertas/ofertas.component';
 import { AddofertasComponent } from './pages/addofertas/addofertas/addofertas.component';
+import { AddpedidosComponent } from './pages/addPedidos/addpedidos/addpedidos.component';
+import { AddOrdenesComComponent } from './pages/addOrdenesCom/add-ordenes-com/add-ordenes-com.component';
+import { ReporteGeneralComponent } from './pages/reporteGeneral/reporte-general/reporte-general.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { AddofertasComponent } from './pages/addofertas/addofertas/addofertas.co
     ProveedoresComponent,
     AddproveedoresComponent,
     OfertasComponent,
-    AddofertasComponent
+    AddofertasComponent,
+    AddpedidosComponent,
+    AddOrdenesComComponent,
+    ReporteGeneralComponent
   ],
   imports: [
     BrowserModule,

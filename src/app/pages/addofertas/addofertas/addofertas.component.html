@@ -1,1 +1,24 @@
-<p>addofertas works!</p>
+<form [formGroup]="formularioArticulo">
+    <div class="mb-3">
+        <label for="Id_oferta" class="form-label">Id Oferta:</label>
+        <input type="number" class="form-control" id="Id_oferta" formControlName="Id_oferta">
+    </div>
+    <div class="mb-3">
+        <label for="Id_Prov" class="form-label">Id Proveedor:</label>
+        <input type="number" class="form-control" id="Id_Prov" formControlName="Id_Prov">
+    </div>
+    <div class="mb-3">
+        <label for="Id_Pedido" class="form-label">Id Pedido:</label>
+        <input type="number" class="form-control" id="Id_Pedido" formControlName="Id_Pedido">
+    </div>
+    <div class="mb-3">
+        <label for="Precio_U" class="form-label">Precio Unitario:</label>
+        <input type="text" class="form-control" id="Precio_U" formControlName="Precio_U">
+    </div>
+    <div class="mb-3">
+        <label for="Fecha_Presentacion" class="form-label">Fecha Presentacion:</label>
+        <input type="date" class="form-control" id="Fecha_Presentacion" formControlName="Fecha_Presentacion">
+    </div>
+    
+    <button class="btn btn-outline-dark" (click)="crearOferta()">Crear Oferta</button>
+</form>

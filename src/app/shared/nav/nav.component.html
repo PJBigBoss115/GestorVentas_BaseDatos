@@ -24,16 +24,16 @@
           </li>
 
           <li *ngIf="userLoginOn" class="nav-item">
-            <a class="nav-link" >Pedidos</a>
+            <a class="nav-link" routerLink="/pedidos">Pedidos</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
-            <a class="nav-link" >Ordenes de Compra</a>
+            <a class="nav-link"  routerLink="/ordenCompra">Ordenes de Compra</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
             <a class="nav-link" routerLink="/reportes/proveedores">Reporte Proveedores</a>
           </li>
           <li *ngIf="userLoginOn" class="nav-item">
-            <a class="nav-link" [routerLink]="['/iniciar', false]">Cerrar Sesión</a>
+            <a class="nav-link" (click)="recargarPagina()" href="javascript:void(0)">Cerrar Sesión</a>
           </li>
         </ul>
       </div>

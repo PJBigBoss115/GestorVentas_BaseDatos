@@ -1,1 +1,23 @@
-<p>or-compras works!</p>
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <button class="btn btn-primary" routerLink="/addOrdenCompra">Agregar Orden</button>
+        <thead>
+            <tr>
+                <th>Id Orden</th>
+                <th>Descripcion</th>
+                <th>Tipo</th>
+                <th>Fecha Armado</th>
+                <th>Fecha Finalizacion</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of informeData">
+                <td>{{ item.Id_Orden }}</td>
+                <td>{{ item.Descripcion }}</td>
+                <td>{{ item.Tipo }}</td>
+                <td>{{ item.fecha_Armado }}</td>
+                <td>{{ item.fecha_finalizado }}</td>
+            </tr>
+            </tbody>
+    </table>
+</div>

@@ -1,1 +1,22 @@
-<p>pedidos works!</p>
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Id Pedidos</th>
+                <th>Id Articulos</th>
+                <th>Cantidad</th>
+                <th>Fecha Realizacion</th>
+                <th>Fecha Estimada</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of informeData">
+                <td>{{ item.Id_Pedido }}</td>
+                <td>{{ item.Id_Articulo }}</td>
+                <td>{{ item.Cantidad }}</td>
+                <td>{{ item.Fecha_Realizacion }}</td>
+                <td>{{ item.Fecha_Estimada }}</td>
+            </tr>
+            </tbody>
+    </table>
+</div>

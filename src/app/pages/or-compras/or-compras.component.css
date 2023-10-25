@@ -1,0 +1,4 @@
+.table-container {
+    margin: 0 auto; /* Centra horizontalmente el contenido */
+    max-width: 90%; /* Establece un ancho máximo para evitar que la tabla sea demasiado ancha */
+}

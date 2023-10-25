@@ -1,0 +1,24 @@
+<form [formGroup]="formularioArticulo">
+    <div class="mb-3">
+        <label for="Id_Pedido" class="form-label">Id Pedido:</label>
+        <input type="number" class="form-control" id="Id_Pedido" formControlName="Id_Pedido">
+    </div>
+    <div class="mb-3">
+        <label for="Id_Articulo" class="form-label">Id Articulo:</label>
+        <input type="number" class="form-control" id="Id_Articulo" formControlName="Id_Articulo">
+    </div>
+    <div class="mb-3">
+        <label for="Cantidad" class="form-label">Cantidad:</label>
+        <input type="number" class="form-control" id="Cantidad" formControlName="Cantidad">
+    </div>
+    <div class="mb-3">
+        <label for="Fecha_Realizacion" class="form-label">Fecha Realizacion:</label>
+        <input type="date" class="form-control" id="Fecha_Realizacion" formControlName="Fecha_Realizacion">
+    </div>
+    <div class="mb-3">
+        <label for="Fecha_Estimada" class="form-label">Fecha Estimada:</label>
+        <input type="date" class="form-control" id="Fecha_Estimada" formControlName="Fecha_Estimada">
+    </div>
+    
+    <button class="btn btn-outline-dark" (click)="HacerPedido()">Hacer Pedido</button>
+</form>

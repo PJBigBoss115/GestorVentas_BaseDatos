@@ -14,6 +14,18 @@ export class AddService {
     return this.http.post(`${this.apiUrl}/crearRegistro/Articulo`, articulo);
   }
 
+  crearPedido(articulo: any) {
+    return this.http.post(`${this.apiUrl}/crearRegistro/Pedidos`, articulo);
+  }
+
+  crearOrden(orden: any) {
+    return this.http.post(`${this.apiUrl}/crearRegistro/Orden_Compra`, orden);
+  }
+
+  crearOferta(orden: any) {
+    return this.http.post(`${this.apiUrl}/crearRegistro/Oferta`, orden);
+  }
+
   editarArticulo(tabla: string, id: number, nuevosDatos: any) {
     const url = `${this.apiUrl}/modificarRegistro/${tabla}/${id}`;
     return this.http.put(url, nuevosDatos);
