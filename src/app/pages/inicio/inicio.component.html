@@ -1,4 +1,26 @@
-<!--Datos-->
-<div>
-    <app-articulos></app-articulos>
+<div class="table-container">
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Trabajadores laborando</th>
+                <th>Sector</th>
+                <th>Nombre de ciudad</th>
+                <th>Departamento</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of informeData">
+                <td>{{ item.NombreD }}</td>
+                <td>{{ item.No_Trabajadores }}</td>
+                <td>{{ item.NombreDepartamento }}</td>
+                <td>{{ item.Nombre_Ciudad }}</td>
+                <td>{{ item.Nombre_Depto }}</td>
+                <td>{{ item.Direccion }}</td>
+                <td>{{ item.No_Celular }}</td>
+            </tr>
+            </tbody>
+    </table>
 </div>

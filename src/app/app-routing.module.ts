@@ -15,6 +15,7 @@ import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { OrComprasComponent } from './pages/or-compras/or-compras.component';
 import { AddpedidosComponent } from './pages/addPedidos/addpedidos/addpedidos.component';
 import { AddOrdenesComComponent } from './pages/addOrdenesCom/add-ordenes-com/add-ordenes-com.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/inicio', pathMatch:'full'},
@@ -33,7 +34,8 @@ const routes: Routes = [
   {path: 'pedidos', component: PedidosComponent},
   {path: 'ordenCompra', component: OrComprasComponent},
   {path: 'addPedido', component: AddpedidosComponent},
-  {path: 'addOrdenCompra', component: AddOrdenesComComponent}
+  {path: 'addOrdenCompra', component: AddOrdenesComComponent},
+  {path: 'reporteSucursales',component: InicioComponent}
 ];
 
 @NgModule({
